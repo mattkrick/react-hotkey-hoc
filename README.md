@@ -21,7 +21,7 @@ and where you use them should be dumb components.
 Example:
 
 ```js
-import {hotkey} from 'redux-hotkey-hoc';
+import hotkey from 'react-hotkey-hoc';
 const statelessComponent = (props) {
   const onEventHandler = (event) => {
     return playWithPropsAndEvent(props, event);
