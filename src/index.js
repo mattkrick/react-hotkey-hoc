@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import Mousetrap from 'mousetrap';
 
 export default ComposedComponent => {
-  return class Hotkey extends Component {
+  return class WithHotkey extends Component {
     constructor(props) {
       super(props);
       this.bindings = [];
