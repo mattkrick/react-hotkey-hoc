@@ -21,17 +21,19 @@ and where you use them should be dumb components.
 Example:
 
 ```js
-import {hotkey} from 'redux-hotkey-hoc';
+import withHotkey from 'react-hotkey-hoc';
 const statelessComponent = (props) {
   const onEventHandler = (event) => {
     return playWithPropsAndEvent(props, event);
   }
   
   props.bindHotkey('enter', onEventHandler);
-  return <Div>Foo</Div>
+  return <Div onClick={onEventHandler}>Foo</Div>
 }
-return hotkey(statelessComponent);
+return withHotkey(statelessComponent);
 ```
+
+There is also an `unbindHotkey(keySequence)` in case you need to unbind it _before_ the component unmounts. This should generally be avoided, as state-based hotkeys might get confusing.
 
 ## License
 
